@@ -1,0 +1,217 @@
+:root{
+    --dark-theme-border: rgb(0, 84, 148);
+    --glow-dark-theme:
+        0 0 5px var(--dark-theme-border),
+        0 0 10px var(--dark-theme-border),
+        0 0 15px var(--dark-theme-border),
+        0 0 20px var(--dark-theme-border);
+
+    --light-theme-border: rgb(0, 155, 222);
+    --glow-light-theme:
+        0 0 5px var(--light-theme-border),
+        0 0 10px var(--light-theme-border),
+        0 0 15px var(--light-theme-border),
+        0 0 20px var(--light-theme-border);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+body#dark-theme {
+    background-color: rgb(40, 40, 40);
+    color: white;
+}
+
+hr.divisore{
+    width: 85%;
+    border: solid 1px rgb(101, 101, 101);
+}
+
+/* HEADER */
+
+header{
+    padding: 50px;
+}
+
+input#searchbar{
+    background-color: rgb(14, 14, 14);
+    border: 2px solid var(--dark-theme-border);
+    width: 30%;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: none;
+    transition: all ease 0.2s;
+    margin: 20px 0;
+    color: white;
+}
+
+input#searchbar:focus{
+    width: 45%;
+    box-shadow: var(--glow-dark-theme);
+    outline: none;
+}
+
+/* MAIN */
+
+main{
+    height: 40%;
+    width: 100%;
+    margin: 30px 0;
+}
+
+#grid-arg-java{
+    width: 90%;
+    max-height: 45vh;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 60px auto;
+    padding: 60px 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.arg{
+    flex: 1 0 20%;
+    max-height: 70%;
+    background-color: rgb(26, 26, 26);
+    border-radius: 20px;
+    margin: 20px;
+    border: 2px solid var(--dark-theme-border);
+    transition: all ease 0.2s;
+    padding: 15px;
+}
+
+.arg:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+    box-shadow: var(--glow-dark-theme);
+}
+
+.arg-title{
+    font-size: 26px;
+}
+
+.arg-desc, code.Main, pre.Main{
+    font-size: 16px;
+}
+
+/* FOOTER */
+
+#copyright-text{
+    text-align: center;
+    margin: auto;
+    padding: 3%;
+    font-size: 32px;
+}
+
+/* OTHER */
+
+.hidden{
+    display: none;
+}
+
+/* SE SI CLICCA UN ARGOMENTO */
+#background-deep-arg{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(99, 99, 99, 0.25);
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 999;
+}
+
+#window-deep-arg{
+    position: inherit;
+    top: inherit;
+    left: inherit;
+    width: 80%;
+    height: 80%;
+    margin: 5% 7.5%;
+    padding: 20px;
+    border: solid 4px var(--dark-theme-border);
+    border-radius: 20px;
+    background-color: rgb(26, 26, 26);
+    z-index: 1000;
+}
+
+.deep-arg-content{
+    overflow-y: scroll;
+    font-size: 20px;
+    text-align: left;
+    padding-right: 20px;
+    max-height: 90%;
+}
+
+/* SCROLLBAR per MOZILLA FIREFOX */
+#grid-arg-java,
+.deep-arg-content {
+    scrollbar-width: thin; 
+    scrollbar-color: rgb(0, 84, 148) #1e1e1e; 
+}
+
+
+/* SCROLLBAR per CHROME, OPERA, SAFARI, MICROSOFT EDGE, SAMSUNG INTERNET, VIVALDI*/
+#grid-arg-java::-webkit-scrollbar,
+.deep-arg-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+#grid-arg-java::-webkit-scrollbar-track,
+.deep-arg-content::-webkit-scrollbar-track {
+    background: #1e1e1e;
+    border-radius: 10px;
+}
+
+#grid-arg-java::-webkit-scrollbar-thumb,
+.deep-arg-content::-webkit-scrollbar-thumb{
+    background: rgb(0, 84, 148);
+    border-radius: 10px;
+}
+
+code,pre{
+    text-align: left;
+}
+
+/* ESTETICA DELLA TABELLA */
+
+td,th{
+    border: solid 2px black;
+}
+
+td,th{
+    padding: 20px;
+}
+
+table{
+    border-radius: 10px;
+    padding: 4px;
+    text-align: center;
+    background-color: #383838;
+    margin: 20px 0;
+}
+
+@media (max-width:500px){
+    code.Main, pre.Main{
+        font-size: 10px;
+    }
+}
+
+@media (max-width:300px){
+    code.Main, pre.Main{
+        font-size: 6px;
+    }
+}
+
+@media (max-height:1000px){
+    #grid-arg-java{
+        max-height: 30vh;
+    }
+}

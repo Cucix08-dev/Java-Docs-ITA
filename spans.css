@@ -1,0 +1,51 @@
+span.keyword{
+    color: rgb(9, 89, 175);
+}
+
+span.keyword2{
+    color: rgb(192, 129, 250);
+}
+
+span.class{
+    color: rgb(61, 179, 128);
+}
+
+span.commento{
+    color: rgb(3, 141, 81);
+}
+
+span.importante{
+    background-color: rgb(100, 113, 0);
+}
+
+span.variabile{
+    color: rgb(148, 200, 255)
+}
+
+span.costante{
+    color: rgb(43, 145, 255)
+}
+
+span.str{
+    color: rgb(194, 107, 0);
+}
+
+span.valore{
+    color: rgb(189, 255, 189);
+}
+
+span.funzione{
+    color: rgb(255, 255, 134);
+}
+
+span.err{
+    color: red;
+}
+
+span.medio{
+    color: rgb(223, 223, 2);
+}
+
+span.crr{
+    color: rgb(0, 255, 64);
+}
